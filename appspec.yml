@@ -1,0 +1,10 @@
+#source diego: https://docs.aws.amazon.com/codedeploy/latest/userguide/tutorial-ecs-create-appspec-file.html
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:sa-east-1:328066530950:task-definition/teste_netcore_api_codepipeline:2"
+        LoadBalancerInfo:
+          ContainerName: "teste_netcore_api_task"
+          ContainerPort: 80

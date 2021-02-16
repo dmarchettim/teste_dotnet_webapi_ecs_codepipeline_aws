@@ -1,3 +1,4 @@
+## source Diego: https://docs.aws.amazon.com/codebuild/latest/userguide/sample-docker.html
 version: 0.2
 
 phases:
