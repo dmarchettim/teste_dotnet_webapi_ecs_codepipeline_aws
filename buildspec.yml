@@ -17,3 +17,6 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push 328066530950.dkr.ecr.sa-east-1.amazonaws.com/teste_dotnet_webapi_ecs_codepipeline_aws:latest
+      - printf '{"ImageURI":"328066530950.dkr.ecr.sa-east-1.amazonaws.com/teste_dotnet_webapi_ecs_codepipeline_aws:latest"}' > imageDetail.json
+artifacts:
+files: imageDetail.json
